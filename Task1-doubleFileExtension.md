@@ -38,13 +38,23 @@ This helps simulate real SOC analyst workflow while using Splunk Cloud without a
 - What time: 2025-12-26 5:48:00
 - What file: Invoice.pdf.exe
 - which Directory: c:\user\alice\downloads\invoice.pdf.exe
-- How: Alice might have downloaded invoice.pdf.exe after interacting with a phishing email masquerading a legitimate sender( maybe and internal sender)
+- How: Alice might have downloaded invoice.pdf.exe after interacting with a phishing email masquerading a legitimate sender( maybe an internal sender)
 - severity: Medium (Alice have not executed the file)
 - Status: True positive.
 - Why is this suspicious?: double extension file is used by attackers to trick target user to something else while it hides malicious contents. Executing this file will leads to initial system compromise, persistence, credentials theft, lateral movement, data exfiltration...
 
 ## Action Taken As A SOC Level 1 Analyst 
+- Classify the Alert:
+1. Threat Type: Malware delivery attempt / Masquerading
+2. MITRE ATT&CK MAPPING:
+Tactic: Defense Evasion / Initial Access
+Technique: Masquerading (T1036)
 
+- Containment:
+1. File deletion or quarantine
+2. user awareness (analyst needsto let the user know to prevent manual execution)
+3. monitor the endpoint closely
+4. Documents the alert for proper investigation by level 2 analyst 
 
 # Learning Outcomes
 - Writing YAML detection rules for SOC alerts.
@@ -52,3 +62,4 @@ Converting detection rules into Splunk SPL using unicoder.io
 - Testing and verifying rules against simulated log events.
 - Configuring alerts in Splunk Cloud, including email notifications and adding to Triggered Alerts.
 - Practicing manual triage, assigning severity, true/false positive status, and documenting notes for each alert by answering questions like "who", "when", "what", "where" and "how"
+- Qiuck decision making to contain infected machine 
