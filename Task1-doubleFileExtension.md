@@ -41,6 +41,7 @@ This helps simulate real SOC analyst workflow while using Splunk Cloud without a
 - How: Alice might have downloaded invoice.pdf.exe after interacting with a phishing email masquerading a legitimate sender( maybe and internal sender)
 - severity: Medium (Alice have not executed the file)
 - Status: True positive.
+- Why is this suspicious?: double extension file is used by attackers to trick target user to something else while it hides malicious contents. Executing this file will leads to initial system compromise, persistence, credentials theft, lateral movement, data exfiltration...
 
 ## Action Taken As A SOC Level 1 Analyst 
 
