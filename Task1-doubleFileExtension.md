@@ -33,6 +33,17 @@ Alert Notification & Manual Triaging
 3. Add comments/notes for context and investigation.
   
 This helps simulate real SOC analyst workflow while using Splunk Cloud without advanced apps.
+## Question Answered
+- Which user created this file: Alice
+- What time: 2025-12-26 5:48:00
+- What file: Invoice.pdf.exe
+- which Directory: c:\user\alice\downloads\invoice.pdf.exe
+- How: Alice might have downloaded invoice.pdf.exe after interacting with a phishing email masquerading a legitimate sender( maybe and internal sender)
+- severity: Medium (Alice have not executed the file)
+- Status: True positive.
+
+## Action Taken As A SOC Level 1 Analyst 
+
 
 # Learning Outcomes
 - Writing YAML detection rules for SOC alerts.
