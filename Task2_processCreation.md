@@ -15,6 +15,8 @@ I wrote the detection rule in YAML format for suspicious process creation from a
 - Product: Windows
 - Detection conditions to match .exe child processes
 - Metatdata such as severity and MITRE ATT&CK mapping
+  
+[suspicious process creation](suspiciousProcessDetection.yml)
 
 I also added parent process detection, specifically looking for explorer.exe as the parent, to identify user-driven execution.
 
