@@ -11,7 +11,7 @@ Write YAML Detection Rule:
 Convert YAML to SPL:
 - Used unicoder.IO to convert the YAML rule into Splunk SPL (Search Processing Language).
 
-  [Double extension detection](doubleExtensionDetection.yml)
+-[Double extension detection](doubleExtensionDetection.yml)
   
 Upload & Test in Splunk Cloud
 - Uploaded simulated CSV logs containing file creation events.
