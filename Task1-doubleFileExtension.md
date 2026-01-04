@@ -16,6 +16,8 @@ Convert YAML to SPL:
 Upload & Test in Splunk Cloud
 - Uploaded simulated CSV logs containing file creation events.
 - Tested the SPL in Search & Reporting to confirm it filters only events matching the rule.
+
+! [putting SPL queries to test](splunk1.jpeg)
   
 Save SPL as Alert:
 - Saved the SPL query as a Splunk alert.
