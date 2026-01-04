@@ -10,6 +10,7 @@ Write YAML Detection Rule:
 - Rule specifies log sources (Windows Security Logs, Sysmon Event ID 1) and event types (file creation).
 Convert YAML to SPL:
 - Used unicoder.IO to convert the YAML rule into Splunk SPL (Search Processing Language).
+- [detection rule for double extension](doubleExtensionDetection.yml)
   
 Upload & Test in Splunk Cloud
 - Uploaded simulated CSV logs containing file creation events.
