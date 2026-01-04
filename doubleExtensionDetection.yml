@@ -1,0 +1,29 @@
+title: File created or downloaded with double file extension 
+id: caab0afe-66bc-4a7f-a774-4db05ee6e8a4
+status: experimental
+description: detects file creation or download events with suspicious double file extension
+author: Olamide
+date: 2025/24/12
+modified: 2025/24/12
+logsource:
+  category: file_event
+  product: windows
+detection:
+  selection:
+    targetfilename | endswith: 
+      - .pdf.exe 
+      - .txt.vbs
+      - .jpg.bat
+      - .docx.scr  #Search identifiers for the detection
+    
+  condition: selection
+fields: 
+  - targetfilename 
+  - user #List of associated fields that are important for the detection
+
+falsepositives: User renaming downloaded file manually
+
+level: medium #Severity level of the detection rule.
+tags: #Associated TTPs from MITRE ATT&CK
+  - attack.defence_evasion #MITRE Tactic
+  - attack.t1036.007 #MITRE Technique
