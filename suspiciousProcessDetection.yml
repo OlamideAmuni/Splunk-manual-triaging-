@@ -1,0 +1,31 @@
+title: new process creation from malicious file 
+id: 1e75a4e0-3226-4cec-8dbd-ed646f92d58b
+status: experimental
+description: detects new suspicious process creation
+author: Olamide
+date: 2025/28/12
+modified: 2025/28/12
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    NewProcessname | endswith: 
+      - .pdf.exe 
+      - .txt.vbs
+      - .jpg.bat
+    #Search identifiers for the detection
+    ParentProcessName|contains: "explorer.exe"
+    
+  condition: selection
+fields: 
+  - NewProcessname 
+  - user
+  - ParentProcessName #List of associated fields that are important for the detection
+
+falsepositives: expected parent to child processes
+
+level: high #Severity level of the detection rule. severity level is high because user executed the file 
+tags: #Associated TTPs from MITRE ATT&CK
+  - attack.execution #MITRE Tactic
+  - attack.t1204.002 #MITRE Technique
