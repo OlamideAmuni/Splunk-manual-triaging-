@@ -37,6 +37,8 @@ The simulated logs represent a realistic attack flow where
 ## Step 4 – Testing the Rule
 I ran the SPL query in splunk cloud search and reporting to confirm that query correctly filtered process creation events. The SPL correctly filtered out process creation events originating from double extension files.
 
+![putting SPL queries to test](splunk4.jpeg)
+
 ## Step 5 – Configuring Alerts
 I saved the SPL query as an alert in Splunk with the following settings:
 
@@ -45,6 +47,8 @@ I saved the SPL query as an alert in Splunk with the following settings:
 - Added the alert to Triggered Alerts for deeper inspection
 - Alert type: scheduled
 - severity: High(due to confirmed execution)
+
+![Triggered Alert](splunk5.jpeg)
 
 ## Step 6 – Manual Triage And Documentation
 Since I do not have access to Splunk SOAR and splunk essential security (a splunk base app for triaging), I manually triaged the alert using pen and paper. During triage, I identified:
