@@ -31,6 +31,7 @@ Configured alert settings:
 Alert Notification & Manual Triaging
 - After one hour, Splunk emails me notifying that an event matched the alert.
 - Open Triggered Alerts in Splunk Cloud.
+![triggered alert](splunk3.jpeg)
 - Manually triage each alert:
 1. Assigned True Positive status.
 2. Set severity level medium.
