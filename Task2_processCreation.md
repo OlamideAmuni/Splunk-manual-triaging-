@@ -21,7 +21,7 @@ I wrote the detection rule in YAML format for suspicious process creation from a
 I also added parent process detection, specifically looking for explorer.exe as the parent, to identify user-driven execution.
 
 ## Step 2 – Converting YAML to SPL
-I converted the YAML rule into Splunk SPL using the online converter unicoder.io .This SPL query was then used to search within Splunk and validate the detection.
+I converted the YAML rule into Splunk SPL using the online converter "unicoder.io" .This SPL query was then used to search within Splunk and validate the detection.
 
 ## Step 3 – Uploading Simulated Logs
 I uploaded a CSV file containing simulated Windows logs, including:
