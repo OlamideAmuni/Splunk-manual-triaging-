@@ -36,7 +36,7 @@ Alert Notification & Manual Triaging
 
 - Manually triage each alert:
 1. Assigned True Positive status.
-2. Set severity level medium.
+2. Set severity level to medium.
 3. Add comments/notes for context and investigation.
   
 This helps simulate real SOC analyst workflow while using Splunk Cloud without advanced apps.
