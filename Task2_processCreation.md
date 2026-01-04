@@ -72,7 +72,7 @@ Level 1 Analyst Action:
 - Severity assigned as High due to malware execution
 - Isolate endpoint (if policy allows)
 - Block file (if policy allow)
-- Escalate to level 2 Analyst
+- Escalate to level 2 Analyst: 
 This step confirmed that the double extension file had been executed, and the parent process name (explorer.exe) validated that it was manually launched by the user.
 
 ## Tool Used
